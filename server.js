@@ -46,6 +46,6 @@ app.get('/api/:guitarName', (request, response) => {
     }
 })
 
-app.listen(PORT, () => {
-console.log('yay :)')
-})
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`running on port ${PORT}`);
+});
